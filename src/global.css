@@ -1,24 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
 :root {
-  --background: rgba(255, 255, 255, 1);
-  --foreground: rgba(0, 0, 0, 1);
+    --background: rgba(255, 255, 255, 1);
+    --foreground: rgba(0, 0, 0, 1);
 
-  --primary-colour: rgba(215, 0, 75, 1);
+    --primary-colour: rgba(215, 0, 75, 1);
 
-  --bad-colour: rgba(255, 0, 0, 1);
-  --bad-colour-transparent: rgba(255, 0, 0, 0.1);
+    --bad-colour: rgba(255, 0, 0, 1);
+    --bad-colour-transparent: rgba(255, 0, 0, 0.1);
 
-  --good-colour: rgba(0, 128, 0, 1);
-  --good-colour-transparent: rgba(0, 128, 0, 0.1);
+    --good-colour: rgba(0, 128, 0, 1);
+    --good-colour-transparent: rgba(0, 128, 0, 0.1);
 
-  --warning-colour: rgba(255, 165, 0, 1);
-  --warning-colour-transparent: rgba(255, 165, 0, 0.1);
+    --warning-colour: rgba(255, 165, 0, 1);
+    --warning-colour-transparent: rgba(255, 165, 0, 0.1);
 
-  --neutral-colour: rgba(128, 128, 128, 1);
-  --neutral-colour-transparent: rgba(128, 128, 128, 0.1);
+    --neutral-colour: rgba(128, 128, 128, 1);
+    --neutral-colour-transparent: rgba(128, 128, 128, 0.1);
+
+    --font-family: "DM Sans", sans-serif;
+    --heading-font: var(--font-family);
+    --paragraph-font: var(--font-family);
 }
 
 html,
 body {
-  /* For relative sizing */
-  font-size: 16px;
+    /* For relative sizing */
+    font-size: 16px;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+textarea {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+}
+
+p,
+input,
+textarea,
+a {
+    font-family: var(--paragraph-font);
+    font-size: 1rem;
+}
+
+.bodyPadding {
+    padding: 64px;
 }
