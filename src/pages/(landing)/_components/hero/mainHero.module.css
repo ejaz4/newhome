@@ -1,0 +1,37 @@
+.hero {
+    min-height: 100vh;
+    max-height: fit-content;
+    padding: var(--body-padding);
+    background: top / cover no-repeat
+        url(/images/hero/pexels-pixabay-358636.jpg);
+    /*background-size: cover;*/
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 1200px) {
+    .hero {
+        background: top / cover no-repeat url(/images/hero/sky.webp);
+    }
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 600px;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 720px) {
+    .hero {
+        gap: 2rem;
+    }
+    .content {
+        justify-content: flex-start;
+        text-align: center;
+    }
+}

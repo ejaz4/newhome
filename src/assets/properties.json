@@ -1,5 +1,6 @@
 [
   {
+    "id": "cf384045-68f9-4981-9be0-69fa8723b258",
     "type": "HOUSE",
     "boundary": "DETACHED",
     "location": {
@@ -42,9 +43,11 @@
       "/images/houses/0/13.webp",
       "/images/houses/0/14.jpg",
       "/images/houses/0/15.webp"
-    ]
+    ],
+    "listedOn": "2025-12-10T10:40:10.030Z"
   },
   {
+    "id": "de1df90a-177c-44fb-8ec3-6702892f1ff2",
     "type": "HOUSE",
     "boundary": "SEMIDETACHED",
     "location": {
@@ -83,9 +86,11 @@
       "/images/houses/1/16.jpeg",
       "/images/houses/1/17.jpeg",
       "/images/houses/1/18.jpeg"
-    ]
+    ],
+    "listedOn": "2025-12-13T14:24:10.030Z"
   },
   {
+    "id": "c33ae119-7358-4d41-8115-e7e9ebc2d61c",
     "type": "APARTMENT",
     "boundary": null,
     "location": {
@@ -127,6 +132,7 @@
       "/images/houses/2/19.png",
       "/images/houses/2/20.png",
       "/images/houses/2/21.png"
-    ]
+    ],
+    "listedOn": "2025-12-18T14:24:10.030Z"
   }
 ]
