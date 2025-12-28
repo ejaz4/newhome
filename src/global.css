@@ -21,6 +21,14 @@
     --font-family: "DM Sans", sans-serif;
     --heading-font: var(--font-family);
     --paragraph-font: var(--font-family);
+
+    --body-padding: 4rem;
+}
+
+@media only screen and (max-width: 720px) {
+    :root {
+        --body-padding: 2rem;
+    }
 }
 
 html,
@@ -68,5 +76,5 @@ a {
 }
 
 .bodyPadding {
-    padding: 64px;
+    padding: var(--body-padding);
 }
