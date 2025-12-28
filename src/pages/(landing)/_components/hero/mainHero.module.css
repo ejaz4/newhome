@@ -1,0 +1,24 @@
+.hero {
+    min-height: 100vh;
+    max-height: fit-content;
+    padding: 64px;
+    background: top / cover no-repeat
+        url(/images/hero/pexels-pixabay-358636.jpg);
+    /*background-size: cover;*/
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 1200px) {
+    .hero {
+        background: top / cover no-repeat url(/images/hero/sky.webp);
+    }
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: columns;
+}

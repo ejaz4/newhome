@@ -3,9 +3,12 @@ import { LogoWithWordMark } from "../logo";
 import styles from "./header.module.css";
 import { MenuIcon, XIcon } from "lucide-react";
 
-export const Header = () => {
+/**
+ * @param {HTMLAttributes<HTMLElement>} props
+ */
+export const Header = (props) => {
   return (
-    <header className={styles.header}>
+    <header className={styles.header} {...props}>
       <Link to={"/"}>
         <LogoWithWordMark />
       </Link>

@@ -63,6 +63,10 @@ h6 {
     font-family: var(--heading-font);
 }
 
+h1 {
+    font-size: 3rem;
+}
+
 p,
 input,
 textarea,
