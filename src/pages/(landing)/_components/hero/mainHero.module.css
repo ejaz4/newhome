@@ -1,7 +1,7 @@
 .hero {
     min-height: 100vh;
     max-height: fit-content;
-    padding: 64px;
+    padding: var(--body-padding);
     background: top / cover no-repeat
         url(/images/hero/pexels-pixabay-358636.jpg);
     /*background-size: cover;*/
