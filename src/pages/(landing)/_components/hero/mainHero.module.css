@@ -1,13 +1,15 @@
 .hero {
     min-height: 100vh;
+    width: 100vw;
     max-height: fit-content;
-    padding: var(--body-padding);
+    /*padding: var(--body-padding);*/
     background: top / cover no-repeat
         url(/images/hero/pexels-pixabay-358636.jpg);
     /*background-size: cover;*/
     color: white;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 @media only screen and (max-width: 1200px) {

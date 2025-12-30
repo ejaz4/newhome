@@ -6,23 +6,26 @@ import { SearchBox } from "../../../../_components/search/box";
 export const MainHero = () => {
   return (
     <section className={styles.hero}>
-      {/* Due to the hierarchal changes in the landing page, the header is embedded in the alt layout on this page.*/}
-      <Header style={{ color: "white" }} />
-      <section className={styles.content}>
-        {/* Word art*/}
-        <h1>
-          A place to find
-          <br />
-          your happy place
-          <br />— this is your{" "}
-          <a>
-            <NewHomeLogo />
-          </a>{" "}
-          newhome
-        </h1>
+      <div className={"bodyPadding"} style={{ height: "100vh" }}>
+        {/* Due to the hierarchal changes in the landing page, the header is embedded in the alt layout on this page.*/}
+        <Header style={{ color: "white" }} />
+        <section className={styles.content}>
+          {/* Word art*/}
+          <h1>
+            A place to find
+            <br />
+            your happy place
+            <br />— this is your{" "}
+            <a>
+              <NewHomeLogo />
+            </a>{" "}
+            newhome
+          </h1>
 
-        <SearchBox />
-      </section>
+          <SearchBox />
+        </section>
+        <div style={{ height: 28 }}></div>
+      </div>
     </section>
   );
 };
