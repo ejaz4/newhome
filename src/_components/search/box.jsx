@@ -1,6 +1,7 @@
-import { SearchIcon } from "lucide-react";
+import { FunnelIcon, SearchIcon } from "lucide-react";
 import styles from "./box.module.css";
 import { Form } from "react-router";
+import { Link } from "react-router";
 
 export const SearchBox = () => {
   const searchParams = new URL(window.location).searchParams;
@@ -8,7 +9,9 @@ export const SearchBox = () => {
 
   return (
     <Form className={styles.searchBox} method={"get"} action={"/search"}>
-      <SearchIcon size={20} />
+      <div className={styles.buttonStrip} style={{ paddingInlineEnd: 0 }}>
+        <SearchIcon style={{ alignSelf: "center" }} size={20} />
+      </div>
       <input
         name="q"
         defaultValue={defaultValue}
@@ -16,6 +19,12 @@ export const SearchBox = () => {
         type="search"
         required
       />
+      <div className={styles.buttonStrip}>
+        <Link className={styles.filter}>
+          <FunnelIcon size={20} />
+          <p>Filter</p>
+        </Link>
+      </div>
     </Form>
   );
 };

@@ -6,6 +6,7 @@
     --foreground-transparent: rgba(0, 0, 0, 0.1);
 
     --primary-colour: rgba(215, 0, 75, 1);
+    --primary-colour-transparent: rgba(215, 0, 75, 0.1);
 
     --bad-colour: rgba(255, 0, 0, 1);
     --bad-colour-transparent: rgba(255, 0, 0, 0.1);
