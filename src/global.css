@@ -4,6 +4,7 @@
     --background: rgba(255, 255, 255, 1);
     --foreground: rgba(0, 0, 0, 1);
     --foreground-transparent: rgba(0, 0, 0, 0.1);
+    --foreground-half: rgba(0, 0, 0, 0.5);
 
     --primary-colour: rgba(215, 0, 75, 1);
     --primary-colour-transparent: rgba(215, 0, 75, 0.1);

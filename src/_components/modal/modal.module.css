@@ -1,0 +1,77 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.in {
+    animation: backdropShow 0.4s ease forwards;
+}
+
+.in .modal {
+    animation: modalInDesktop 0.3s ease forwards;
+}
+
+.out {
+    animation: backdropHide 0.4s ease forwards;
+}
+
+.out .modal {
+    animation: modalOutDesktop 0.3s ease forwards;
+}
+
+@keyframes backdropShow {
+    from {
+        background-color: transparent;
+        backdrop-filter: blur(0);
+    }
+    to {
+        background-color: var(--foreground-half);
+        backdrop-filter: blur(0.5rem) saturate(180%);
+    }
+}
+
+@keyframes backdropHide {
+    to {
+        background-color: transparent;
+        backdrop-filter: blur(0);
+    }
+    from {
+        background-color: var(--foreground-half);
+        backdrop-filter: blur(0.5rem) saturate(180%);
+    }
+}
+
+.modal {
+    background-color: var(--background);
+    width: fit-content;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+@keyframes modalInDesktop {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes modalOutDesktop {
+    to {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
