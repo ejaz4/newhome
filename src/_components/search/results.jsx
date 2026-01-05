@@ -1,3 +1,4 @@
+import { FrownIcon } from "lucide-react";
 import { usePropertySearch } from "../../libs/usePropertySearch";
 import { Result } from "./result";
 import styles from "./results.module.css";
@@ -7,6 +8,26 @@ export const SearchResultsList = (params) => {
 
   return (
     <ul className={styles.resultList}>
+      {results.length == 0 && (
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "2rem",
+            gap: "1rem",
+          }}
+        >
+          <h2>
+            <FrownIcon /> No results found
+          </h2>
+          <p>
+            Maybe the place you&apos;re looking for is way too new it
+            hasn&apos;t appeared yet.
+          </p>
+        </div>
+      )}
       {results.map((result, _) => (
         <li key={_}>
           <Result
