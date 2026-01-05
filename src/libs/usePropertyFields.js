@@ -11,7 +11,9 @@ export const usePropertyFields = (filters) => {
   let fieldsObject = {};
 
   for (const type of types) {
-    fieldsObject[type] = Array.from(new Set(properties.map((e) => e[type])));
+    fieldsObject[type] = Array.from(
+      new Set(properties.map((e) => e[type])),
+    ).filter((e) => e != null);
   }
 
   return fieldsObject;
