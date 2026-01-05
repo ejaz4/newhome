@@ -18,6 +18,8 @@ const SearchResultsPage = () => {
         listedAfter={searchParams.get("listedAfter")}
         listedBefore={searchParams.get("listedBefore")}
         postcode={searchParams.get("postcode")}
+        bedroomsMax={searchParams.get("maximumBedrooms")}
+        bedrooms={searchParams.get("minumumBedrooms")}
       />
     </div>
   );

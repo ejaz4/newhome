@@ -48,6 +48,18 @@ const FilterModalPage = () => {
 
         <section>
           <span>
+            <p>Minimum Bedrooms</p>
+            <input type="number" id="minimumBedrooms" name="minimumBedrooms" />
+          </span>
+
+          <span>
+            <p>Maximum Bedrooms</p>
+            <input type="number" id="maximumBedrooms" name="maximumBedrooms" />
+          </span>
+        </section>
+
+        <section>
+          <span>
             <p>Minimum Price</p>
             <CurrencyInput name="minimumPrice" prefix="£" decimalsLimit={2} />
           </span>

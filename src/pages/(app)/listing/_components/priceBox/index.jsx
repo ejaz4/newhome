@@ -53,11 +53,28 @@ export const PriceBox = ({ property }) => {
 
       <TagBox>
         {price.isRent && <Tag label={"Rent"} />}
-        {property.tenure && <Tag label={property.tenure} />}
-        {property.bathrooms > 1 && <Tag label={"Lots of bathrooms"} />}
-        {property.bedrooms.length > 3 && <Tag label={"Big families"} />}
+        {property.tenure && (
+          <Tag
+            to={`/search?tenure=${property.tenure}`}
+            label={property.tenure}
+          />
+        )}
+        {property.bathrooms && (
+          <Tag to={"#"} label={`${property.bathrooms} bathrooms`} />
+        )}
+        {property.bedrooms.length && (
+          <Tag
+            to={`/search?minimumBedrooms=${property.bedrooms.length}`}
+            label={`${property.bedrooms.length} bedrooms`}
+          />
+        )}
 
-        {property.boundary && <Tag label={property.boundary} />}
+        {property.boundary && (
+          <Tag
+            to={`/search?boundary=${property.boundary}`}
+            label={property.boundary}
+          />
+        )}
         {dateLabel && <Tag label={dateLabel} />}
       </TagBox>
 
