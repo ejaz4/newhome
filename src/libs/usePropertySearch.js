@@ -40,32 +40,41 @@ export const usePropertySearch = ({
 
   if (type) {
     if (type.length != 0) {
-      if (
-        results.filter((e) => e.type).filter((e) => e.type.trim() != "")
-          .length != 0
-      ) {
-        results = results.filter((e) => type.includes(e.type));
+      if (!type[0] == "") {
+        if (
+          results.filter((e) => e.type).filter((e) => e.type.trim() != "")
+            .length != 0
+        ) {
+          results = results.filter((e) => type.includes(e.type));
+        }
       }
     }
   }
 
   if (boundary) {
     if (boundary.length != 0) {
-      if (
-        results.filter((e) => e.boundary).filter((e) => e.boundary.trim() != "")
-          .length != 0
-      ) {
-        results = results.filter((e) => boundary.includes(e.boundary));
+      if (!boundary[0] == "") {
+        if (
+          results
+            .filter((e) => e.boundary)
+            .filter((e) => e.boundary.trim() != "").length != 0
+        ) {
+          results = results.filter((e) => boundary.includes(e.boundary));
+        }
       }
     }
   }
 
   if (tenure) {
-    if (
-      results.filter((e) => e.tenure).filter((e) => e.tenure.trim() != "")
-        .length != 0
-    ) {
-      results = results.filter((e) => tenure.includes(e.tenure));
+    if (tenure.length != 0) {
+      if (!tenure[0] == "") {
+        if (
+          results.filter((e) => e.tenure).filter((e) => e.tenure.trim() != "")
+            .length != 0
+        ) {
+          results = results.filter((e) => tenure.includes(e.tenure));
+        }
+      }
     }
   }
 

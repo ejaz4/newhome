@@ -36,6 +36,16 @@ const FilterModalPage = () => {
           ))}
         </select>
 
+        <p>Tenure</p>
+        <select name="tenure" id="tenure" multiple>
+          <option value="">Any</option>
+          {fields["tenure"].map((e, idx) => (
+            <option value={e} key={idx}>
+              {e.charAt(0) + e.toLowerCase().slice(1)}
+            </option>
+          ))}
+        </select>
+
         <section>
           <span>
             <p>Minimum Price</p>
