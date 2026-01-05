@@ -10,6 +10,9 @@ export const usePropertySearch = ({
   maximumPrice,
   listedAfter,
   listedBefore,
+  tenure,
+  town,
+  bedrooms,
   postcode,
 }) => {
   let results = useProperties();
@@ -35,12 +38,45 @@ export const usePropertySearch = ({
     results = client.search(query).map((i) => i.item);
   }
 
-  if (type.filter((e) => e.trim() != "").length != 0) {
-    results = results.filter((e) => type.includes(e.type));
+  if (type) {
+    if (type.length != 0) {
+      if (
+        results.filter((e) => e.type).filter((e) => e.type.trim() != "")
+          .length != 0
+      ) {
+        results = results.filter((e) => type.includes(e.type));
+      }
+    }
   }
 
-  if (boundary.filter((e) => e.trim() != "").length != 0) {
-    results = results.filter((e) => boundary.includes(e.boundary));
+  if (boundary) {
+    if (boundary.length != 0) {
+      if (
+        results.filter((e) => e.boundary).filter((e) => e.boundary.trim() != "")
+          .length != 0
+      ) {
+        results = results.filter((e) => boundary.includes(e.boundary));
+      }
+    }
+  }
+
+  if (tenure) {
+    if (
+      results.filter((e) => e.tenure).filter((e) => e.tenure.trim() != "")
+        .length != 0
+    ) {
+      results = results.filter((e) => tenure.includes(e.tenure));
+    }
+  }
+
+  if (town) {
+    if (
+      results
+        .filter((e) => e.location.town)
+        .filter((e) => e.location.town.trim() != "").length != 0
+    ) {
+      results = results.filter((e) => type.includes(e.location.town));
+    }
   }
 
   if (minimumPrice) {
@@ -55,6 +91,10 @@ export const usePropertySearch = ({
 
   if (postcode) {
     results = results.filter((e) => e.location.postcode.includes(postcode));
+  }
+
+  if (bedrooms) {
+    results = results.filter((e) => e.bedrooms.length > bedrooms);
   }
 
   return results;

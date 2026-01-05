@@ -137,5 +137,179 @@
     ],
     "floorPlan": null,
     "listedOn": "2025-12-18T14:24:10.030Z"
+  },
+  {
+    "id": "abc4136e-0468-47e6-8938-00256b1b8a3a",
+    "type": "APARTMENT",
+    "boundary": "END OF TERRACE",
+    "location": {
+      "number": 2,
+      "street": "Portland Place",
+      "town": "London",
+      "postcode": "W1B"
+    },
+    "price": {
+      "price": 18500000,
+      "currency": "GBP",
+      "isRent": false,
+      "period": null
+    },
+    "bedrooms": [
+      "Bedroom 1",
+      "Bedroom 2",
+      "Bedroom 3",
+      "Bedroom 4",
+      "Bedroom 5"
+    ],
+    "bathrooms": 6,
+    "tenure": "LEASEHOLD",
+    "description": "Portland Place is a luxurious Georgian townhouse, recently transformed into a stunning family home with timeless interiors and nods to its rich history. The recent refurbishment of this exquisite property was orchestrated by renowned interior designer Hubert Zandberg, in collaboration with architectural designer Jan Swanpoel.\nWhile the exterior facade remains unchanged, the interior has been reimagined into extraordinary spaces for entertaining and relaxation, while retaining original features and exceptional ceiling heights. The home boasts an essence of 1940s aesthetic with nods to a variety of bold styles, creating a unique and stylish living space. Portland Place is equipped with the latest in modern technologies, including a beautiful Wolf Range Cooker, a Lutron Homeworks lighting and shading control system, and integrated control features.\nThe principal suite, which was once the building's Grand Salon, is a tranquil retreat from the city with two ensuite dressing rooms and two finely finished bathrooms. Additionally, there are three full guest bedrooms with ensuite bathrooms and staff accommodation on the top floor of the home.\nPortland Place is located in the heart of Prime Central London, with Oxford Circus at one end and The Regent’s Park at the other. This postcode exudes prestige and elegance, surrounded by some of London's top restaurants, boutiques, and health & wellbeing amenities. This area offers a retreat from the hustle and bustle of London's busy streets, with one of London's finest Royal Parks just a 5-minute walk away. Alternatively, you have London’s epicentre, Regent’s Street and Oxford Street, a 5-minute walk in the opposite direction. Experience the luxurious lifestyle of Portland Place and make it your own.",
+    "images": [
+      "/images/houses/3/0.jpeg",
+      "/images/houses/3/1.jpeg",
+      "/images/houses/3/2.jpeg",
+      "/images/houses/3/3.jpeg",
+      "/images/houses/3/4.jpeg",
+      "/images/houses/3/5.jpeg",
+      "/images/houses/3/6.jpeg",
+      "/images/houses/3/7.jpeg",
+      "/images/houses/3/8.jpeg",
+      "/images/houses/3/9.jpeg",
+      "/images/houses/3/10.jpeg",
+      "/images/houses/3/11.jpeg",
+      "/images/houses/3/12.jpeg",
+      "/images/houses/3/13.jpeg",
+      "/images/houses/3/14.jpeg",
+      "/images/houses/3/15.jpeg",
+      "/images/houses/3/16.jpeg",
+      "/images/houses/3/17.jpeg",
+      "/images/houses/3/18.jpeg",
+      "/images/houses/3/19.jpeg",
+      "/images/houses/3/20.jpeg",
+      "/images/houses/3/21.jpeg"
+    ],
+    "floorPlan": "/images/houses/3/floorplan.jpeg",
+    "listedOn": "2025-09-10T10:40:10.030Z"
+  },
+  {
+    "id": "49492257-404f-400f-b187-3f6c3b9b60fb",
+    "type": "HOUSE",
+    "boundary": "TERRACED",
+    "location": {
+      "number": 18,
+      "street": "Conway Street",
+      "town": "London",
+      "postcode": "W1T"
+    },
+    "price": {
+      "price": 4000000,
+      "currency": "GBP",
+      "isRent": false,
+      "period": null
+    },
+    "bedrooms": ["Bedroom 1", "Bedroom 2", "Bedroom 3", "Bedroom 4"],
+    "bathrooms": 3,
+    "tenure": "FREEHOLD",
+    "description": "Having been owned by the same family for decades, this is a rare chance to buy a freehold house within this prestigious part of W1T. This characterful property offers elegant entertainment space spread over the ground and first floors, including a well proportioned ground floor reception room and dining room, a stunning first floor reception room with full length balcony and a kitchen/breakfast room. There is flexible space above, with four bedrooms (two ensuite), a family bathroom and an additional kitchen/utility room, with loft and eave storage on the easily accessible top floor.\n\nThe house further benefits from a peaceful rear terrace facing down the mews, utility rooms and guest WC.\n\nThis beautiful home, with many intact period features, occupies four floors (plus loft and eaves) of a Georgian terrace.\n\nSituation\n\nThe property forms a central part of a handsome, listed Georgian terrace, constructed c. 1793. Conway Street is quietly situated within the Fitzroy Square Conservation Area, and just a few yards north of Fitzroy Square itself. The area retains its Georgian charm and the influence of Robert Adam, some of whose finest neoclassical work is seen nearby.\n\nFitzrovia boasts a thriving community with grand buildings, galleries, restaurants and cafes. Nearby there are wide open spaces of Regent's Park including various sporting amenities. The property has enviable transport links including Great Portland Street / Euston Square Stations (Hammersmith & City, Circle and Metropolitan lines), Warren Street (Northern, Victoria lines), Regent's Park (Bakerloo), Goodge Street (Northern line) and Tottenham Court Road (Northern, Central & Elizabeth lines).",
+    "images": [
+      "/images/houses/4/0.jpeg",
+      "/images/houses/4/1.jpeg",
+      "/images/houses/4/2.jpeg",
+      "/images/houses/4/3.jpeg",
+      "/images/houses/4/4.jpeg",
+      "/images/houses/4/5.jpeg",
+      "/images/houses/4/6.jpeg",
+      "/images/houses/4/7.jpeg",
+      "/images/houses/4/8.jpeg",
+      "/images/houses/4/9.jpeg",
+      "/images/houses/4/10.jpeg"
+    ],
+    "floorPlan": "/images/houses/4/floorplan.jpeg",
+    "listedOn": "2026-01-04T10:40:10.030Z"
+  },
+  {
+    "id": "2e6fd6ed-7622-4b4d-86a3-50421997359a",
+    "type": "APARTMENT",
+    "boundary": null,
+    "location": {
+      "number": 18,
+      "street": "South Quay Plaza",
+      "town": "Canary Wharf",
+      "postcode": "E149WS"
+    },
+    "price": {
+      "price": 5460000,
+      "currency": "GBP",
+      "isRent": false,
+      "period": null
+    },
+    "bedrooms": ["Bedroom 1", "Bedroom 2", "Bedroom 3", "Bedroom 4"],
+    "bathrooms": 4,
+    "tenure": "LEASEHOLD",
+    "description": "An exceptional four-bedroom, four-bathroom duplex penthouse occupying the 53rd floor of the landmark South Quay Plaza development by Berkeley. Spanning 2,731 sq ft, with a spectacular wraparound terrace, this residence offers some of the most breathtaking views across Canary Wharf, the River Thames and beyond.\n\n Interior\n\n The lower level showcases striking herringbone parquet flooring, soaring double-height ceilings, and floor-to-ceiling dual-aspect glazing. The open-plan reception flows seamlessly into a bespoke designer kitchen with Gaggenau appliances and a statement marble island. A generously sized bedroom suite is also located on this level, complete with luxury en-suite bathroom.\n\n Upstairs, three further bedroom suites are arranged for comfort and privacy, each benefiting from its own stylish en-suite. The principal suite enjoys direct access to the terrace, abundant storage, and panoramic skyline views.\n\n Development & Amenities\n\n Residents of South Quay Plaza enjoy exclusive access to the Quay Club, featuring:\n\n 20m swimming pool overlooking South Dock\n\n Spa, sauna, steam room & wellness suite\n\n State-of-the-art gym and fitness studios\n\n Private cinema, dining rooms, games and karaoke lounge\n\n Co-working spaces and meeting rooms (Level 37 iGarden)\n\n 56th-floor Quay Club bar and lounge with panoramic terrace\n\n 24-hour concierge and estate security\n\n Key Information\n\n Size: 2,731 sq ft\n\n Bedrooms/Bathrooms: 4 Bed | 4 Bath (all en-suite) | Duplex Penthouse\n\n Floor: 53rd with wraparound terrace\n\n Lease: 999 years\n\n Service Charge: £9.53 per sq ft per annum (subject to change)\n\n Council Tax Band: G\n\n Price: £5,460,000\n\n Location\n\n Located moments from South Quay DLR and a short walk from Canary Wharf station (Jubilee Line & Elizabeth Line), South Quay Plaza places the City, West End and Heathrow within easy reach.",
+    "images": [
+      "/images/houses/5/0.png",
+      "/images/houses/5/1.png",
+      "/images/houses/5/2.png",
+      "/images/houses/5/3.png",
+      "/images/houses/5/4.png",
+      "/images/houses/5/5.png",
+      "/images/houses/5/6.png",
+      "/images/houses/5/7.png",
+      "/images/houses/5/8.png",
+      "/images/houses/5/9.png",
+      "/images/houses/5/10.png"
+    ],
+    "floorPlan": "/images/houses/5/floorplan.png",
+    "listedOn": "2025-10-19T10:40:10.030Z"
+  },
+  {
+    "id": "3de42a47-2160-4856-be37-352d852b2309",
+    "type": "HOUSE BOAT",
+    "boundary": null,
+    "location": {
+      "number": "",
+      "street": "St Katherine Docks",
+      "town": "Wapping",
+      "postcode": "E1W"
+    },
+    "price": {
+      "price": 139000,
+      "currency": "GBP",
+      "isRent": false,
+      "period": null
+    },
+    "bedrooms": ["Bedroom 1", "Bedroom 2", "Bedroom 3", "Bedroom 4"],
+    "bathrooms": 2,
+    "tenure": "NON-TRADITIONAL",
+    "description": "Windrush is a beautifully maintained widebeam barge that offered an opportunity to enjoy life on the water without compromising on comfort or location. With its elegant lines and thoughtfully designed interior, this vessel combined traditional charm with modern amenities, making it an ideal London pied-à-terre.\n\n The barge featured an open-plan living area filled with natural light, a well-appointed galley kitchen with modern appliances, and three comfortable cabins. The master bedroom included built-in storage and a private en suite. The main bathroom was designed as a contemporary wetroom, complemented by a separate toilet, adding both style and practicality to the living space. The vessel was also equipped with efficient heating and insulation, ensuring year-round comfort.\n\n Windrush was moored in a prime location within St Katharine Docks, one of London’s most prestigious marinas. This central setting offered excellent transport links, with Tower Hill Underground and Tower Gateway DLR stations just a short walk away. The marina itself is a vibrant community, home to a variety of restaurants, cafés, and bars, providing residents and visitors with a rich selection of dining and leisure options.\n\n Windrush represented a unique lifestyle opportunity in one of London’s most iconic waterside locations. Mooring charges £25,548 per annum approx.",
+    "images": [
+      "/images/houses/6/0.jpeg",
+      "/images/houses/6/1.jpeg",
+      "/images/houses/6/2.jpeg",
+      "/images/houses/6/3.jpeg",
+      "/images/houses/6/4.jpeg",
+      "/images/houses/6/5.jpeg",
+      "/images/houses/6/6.jpeg",
+      "/images/houses/6/7.jpeg",
+      "/images/houses/6/8.jpeg",
+      "/images/houses/6/9.jpeg",
+      "/images/houses/6/10.jpeg",
+      "/images/houses/6/11.jpeg",
+      "/images/houses/6/12.jpeg",
+      "/images/houses/6/13.jpeg",
+      "/images/houses/6/14.jpeg",
+      "/images/houses/6/15.jpeg",
+      "/images/houses/6/16.jpeg",
+      "/images/houses/6/17.jpeg",
+      "/images/houses/6/18.jpeg",
+      "/images/houses/6/19.jpeg",
+      "/images/houses/6/20.jpeg",
+      "/images/houses/6/21.jpeg",
+      "/images/houses/6/22.jpeg",
+      "/images/houses/6/23.jpeg"
+    ],
+    "floorPlan": "/images/houses/6/floorplan.jpeg",
+    "listedOn": "2025-12-26T10:40:10.030Z"
   }
 ]
