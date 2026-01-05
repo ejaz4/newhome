@@ -18,6 +18,7 @@ export const usePropertySearch = ({
 }) => {
   let results = useProperties();
 
+  // If there is a query, search using that query first (fuzzy)
   if (query) {
     const client = new Fuse(results, {
       keys: [
@@ -39,9 +40,13 @@ export const usePropertySearch = ({
     results = client.search(query).map((i) => i.item);
   }
 
+  // Check if there is a type
   if (type) {
+    // Check if type isn't just an empty array
     if (type.length != 0) {
+      // Check that type isn't set to any
       if (!type[0] == "") {
+        // Filter out type
         if (
           results.filter((e) => e.type).filter((e) => e.type.trim() != "")
             .length != 0
@@ -79,6 +84,7 @@ export const usePropertySearch = ({
     }
   }
 
+  // Filter by town
   if (town) {
     if (
       results
@@ -113,6 +119,7 @@ export const usePropertySearch = ({
 
   if (listedAfter) {
     if (listedAfter != "") {
+      // Calculate and compare unix millis
       const listedAfterDate = new Date(listedAfter);
       results = results.filter(
         (e) => new Date(e.listedOn).getTime() > listedAfterDate.getTime(),
@@ -122,6 +129,7 @@ export const usePropertySearch = ({
 
   if (listedBefore) {
     if (listedBefore != "") {
+      // Calculate and compare unix millis
       const listedBeforeDate = new Date(listedBefore);
       results = results.filter(
         (e) => new Date(e.listedOn).getTime() < listedBeforeDate.getTime(),

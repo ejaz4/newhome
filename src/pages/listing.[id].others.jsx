@@ -11,12 +11,16 @@ import { SparklesIcon } from "lucide-react";
 const OtherProperties = () => {
   const { id } = useParams();
   const property = useProperty(id);
-  const [random, setRandom] = useState(() => Math.random());
+  // Use a hook so that the value does not change on every re-render
+  const [random] = useState(() => Math.random());
+  // List of keys
   const keys = ["type", "bedrooms", "bathrooms", "town", "boundary", "tenure"];
-  const [keyToCheck, setKeyToCheck] = useState(() => {
+  // Select a random key
+  const [keyToCheck] = useState(() => {
     return keys[Math.floor(random * keys.length)];
   });
-  let [propertyValue, setPropertyValue] = useState(() => {
+  // Now get the value of the key
+  let [propertyValue] = useState(() => {
     if (keyToCheck == "town") {
       return property["location"]["town"];
     }
@@ -31,9 +35,12 @@ const OtherProperties = () => {
     return property[keyToCheck];
   });
 
+  // Find other properties with same/more values to that key
   const results = usePropertySearch({ [keyToCheck]: propertyValue }).filter(
     (e) => e.id != id,
   );
+
+  // Display those
 
   return (
     <Modal className={styles.favourites}>
@@ -42,6 +49,9 @@ const OtherProperties = () => {
         Check out some of these newhomes you might also want to add to your
         favourites.
       </p>
+
+      {/* Random section */}
+      {/* Show different places */}
       {keyToCheck == "type" && (
         <h3>Other {propertyValue[0].toLowerCase()}s you may like</h3>
       )}

@@ -2,6 +2,10 @@ import styles from "./modal.module.css";
 import { joinClasses } from "../../libs/joinClasses";
 import { useNavigate } from "react-router";
 
+/**
+ * Modal component
+ * Used for pop-ups and modals around the website
+ */
 export const Modal = ({
   children,
   onClick,

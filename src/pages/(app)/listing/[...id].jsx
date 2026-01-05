@@ -59,7 +59,17 @@ const ListingPage = () => {
           )}
 
           <TabPanel>
-            <iframe loading="lazy" style={{border: "none",  width: "100%", height: 400, borderRadius: "1rem"}} allowfullscreen src={`https://maps.google.com/maps?q=${property.location.number}%2C${property.location.street}%2C${property.location.town}&output=embed`}/>
+            <iframe
+              loading="lazy"
+              style={{
+                border: "none",
+                width: "100%",
+                height: 400,
+                borderRadius: "1rem",
+              }}
+              allowfullscreen
+              src={`https://maps.google.com/maps?q=${property.location.number}%2C${property.location.street}%2C${property.location.town}&output=embed`}
+            />
           </TabPanel>
         </Tabs>
 

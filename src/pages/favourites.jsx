@@ -55,6 +55,8 @@ const Favourites = () => {
           </p>
         </div>
       )}
+
+      {/* Show list if favourites have been found*/}
       <ul className={styles.list}>
         {favourites.map((e, idx) => (
           <li key={idx}>

@@ -22,6 +22,7 @@ export const SearchResultsList = (params) => {
           <h2>
             <FrownIcon /> No results found
           </h2>
+          {/* HTML Encoding to prevent accidental JS injection */}
           <p>
             Maybe the place you&apos;re looking for is way too new it
             hasn&apos;t appeared yet.

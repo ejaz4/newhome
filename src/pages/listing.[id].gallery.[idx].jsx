@@ -5,6 +5,7 @@ import { Link } from "react-router";
 import styles from "./(app)/listing/_components/gallery/grid.module.css";
 import { useLocation } from "react-router";
 
+// The image itself shown in a modal
 const GalleryImage = () => {
   const { id, idx } = useParams();
   const property = useProperty(id);
