@@ -51,7 +51,7 @@
     background-color: var(--background);
     width: fit-content;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 @keyframes modalInDesktop {
@@ -73,5 +73,49 @@
     from {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .backdrop {
+        align-items: end;
+    }
+    .modal {
+        padding-bottom: 4rem !important;
+        border-end-end-radius: 0px;
+        border-end-start-radius: 0px;
+        border: solid 2px var(--foreground-transparent);
+        padding: 1rem;
+    }
+
+    .in .modal {
+        animation: modalInMobile 0.3s cubic-bezier(0.19, 0.92, 0.37, 1.11);
+    }
+
+    @keyframes modalInMobile {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+
+    .out .modal {
+        animation: modalOutMobile 0.3s cubic-bezier(0.19, 0.92, 0.37, 1.11)
+            forwards;
+    }
+
+    @keyframes modalOutMobile {
+        from {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(100%);
+            opacity: 0;
+        }
     }
 }
