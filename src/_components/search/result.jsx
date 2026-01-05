@@ -42,8 +42,6 @@ export const Result = ({ id }) => {
   const listedOnObj = new Date(listedOn);
   const relativeDate = getRelativeDate(listedOnObj);
 
-  console.log(listedOnObj);
-
   return (
     <Link to={`/listing/${id}`} className={styles.result}>
       <img src={image} />

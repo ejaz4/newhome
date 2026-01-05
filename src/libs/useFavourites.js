@@ -16,7 +16,6 @@ export const useFavourites = () => {
   // Listen for changes in other tabs
   useEffect(() => {
     const handleStorageChange = (e) => {
-      console.log(e);
       if (e.key === "favourites") {
         setFavourites(e.newValue ? JSON.parse(e.newValue) : []);
       }
