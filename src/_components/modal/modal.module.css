@@ -52,6 +52,8 @@
     width: fit-content;
     border-radius: 1rem;
     padding: 2rem;
+    max-height: calc(100vh - 100px);
+    overflow: auto;
 }
 
 @keyframes modalInDesktop {
@@ -86,6 +88,7 @@
         border-end-start-radius: 0px;
         border: solid 2px var(--foreground-transparent);
         padding: 1rem;
+        width: 100%;
     }
 
     .in .modal {

@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 0.25rem;
+    gap: 0.5rem;
 }
 
 .priceLabel {
@@ -46,4 +46,23 @@
 
 .resultList li {
     list-style: none;
+}
+
+.result button {
+    width: fit-content;
+}
+
+@media only screen and (max-width: 720px) {
+    .result {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .result img {
+        width: 100%;
+    }
+
+    .resultInfo > p:last-child {
+        display: none;
+    }
 }

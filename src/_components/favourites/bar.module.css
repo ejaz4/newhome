@@ -1,0 +1,42 @@
+.drop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 4rem;
+    transition: background-color 0.4s ease;
+}
+
+.over {
+    background-color: var(--foreground-half);
+}
+
+.bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    padding: 2rem;
+    border-radius: 1rem;
+    animation: barUp 0.3s ease;
+    box-shadow: 0px 4px 0.5rem rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.over .bar {
+    transform: scale(1.2) rotate(3deg);
+}
+
+@keyframes barUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+    }
+}

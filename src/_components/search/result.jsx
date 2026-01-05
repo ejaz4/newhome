@@ -2,7 +2,9 @@ import { Link } from "react-router";
 import { propertyNameCreator } from "../../libs/propertyName";
 import styles from "./results.module.css";
 import { getRelativeDate } from "../../libs/dateParser";
-import { RectangleEllipsisIcon } from "lucide-react";
+import { HeartIcon, RectangleEllipsisIcon } from "lucide-react";
+import { useProperty } from "../../libs/useProperty";
+import { useFavourites } from "../../libs/useFavourites";
 
 /**
  *
@@ -21,16 +23,15 @@ import { RectangleEllipsisIcon } from "lucide-react";
  * @param {string} description
  * @returns {React.ReactElement} The rendered JSX.
  */
-export const Result = ({
-  id,
-  image,
-  type,
-  street,
-  town,
-  price,
-  listedOn,
-  description,
-}) => {
+export const Result = ({ id }) => {
+  const { images, type, location, price, listedOn, description } =
+    useProperty(id);
+  const [favourites, toggleFavourite] = useFavourites();
+
+  const town = location.town;
+  const street = location.street;
+  const image = images.length != 0 ? images[0] : null;
+
   const name = propertyNameCreator(type, street, town, price.isRent);
 
   const priceLabel = new Intl.NumberFormat(navigator.language, {
@@ -52,6 +53,20 @@ export const Result = ({
 
           {/* Price period for places that can only be paid off in installments, such as rent or shared ownership households */}
           {price.period && <p>{price.period.toLowerCase()}</p>}
+
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              toggleFavourite(id);
+            }}
+          >
+            <HeartIcon
+              size={20}
+              style={{ display: "block" }}
+              fill={favourites.includes(id) ? "black" : "transparent"}
+            />
+          </button>
         </span>
         <p className={styles.name}>{name}</p>
         <p>Listed {relativeDate}</p>

@@ -1,24 +1,58 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
+import { useNavigate } from "react-router";
 
 export const useFavourites = () => {
-  const [favourites, setFavourites] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const [favourites, setFavourites] = useState(() => {
+    const stored = window.localStorage.getItem("favourites");
+    return stored ? JSON.parse(stored) : [];
+  });
+  const [lastAction, setLastAction] = useState(null);
+  const [id, setId] = useState(null);
+
+  // Listen for changes in other tabs
+  useEffect(() => {
+    const handleStorageChange = (e) => {
+      console.log(e);
+      if (e.key === "favourites") {
+        setFavourites(e.newValue ? JSON.parse(e.newValue) : []);
+      }
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
 
   useEffect(() => {
-    if (favourites == null) return;
-
-    window.localStorage.setItem("favourites", JSON.stringify(favourites));
+    if (favourites !== null) {
+      window.localStorage.setItem("favourites", JSON.stringify(favourites));
+      window.dispatchEvent(new Event("storage"));
+    }
   }, [favourites]);
 
-  if (window.localStorage.getItem("favourites")) {
-    setFavourites(JSON.parse(window.localStorage.getItem("favourites")));
-  } else {
-    setFavourites([]);
-  }
+  useEffect(() => {
+    if (id == null);
+    if (lastAction == null);
+
+    if (lastAction == "added") {
+      navigate(`/listing/${id}/others`, { state: { background: location } });
+    }
+  }, [lastAction, id]);
 
   const toggleFavourites = (id) => {
-    setFavourites((e) =>
-      e.includes(id) ? e.filter((t) => t != id) : e.push(id),
-    );
+    setId(id);
+    setFavourites((prev) => {
+      if (prev.includes(id)) {
+        setLastAction("removed");
+        return prev.filter((t) => t !== id);
+      } else {
+        setLastAction("added");
+        return [...prev, id];
+      }
+    });
   };
 
   return [favourites, toggleFavourites];

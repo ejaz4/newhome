@@ -3,6 +3,7 @@ import resultStyle from "../../../../../_components/search/results.module.css";
 import { Tag, TagBox } from "./tag";
 
 import { getRelativeDate } from "../../../../../libs/dateParser";
+import { useFavourites } from "../../../../../libs/useFavourites";
 
 /**
  * JSDoc for a function that receives an object `param0` which contains a `property` object.
@@ -30,6 +31,8 @@ import { getRelativeDate } from "../../../../../libs/dateParser";
  * @param {string} param0.property.listedOn - ISO 8601 date string when the property was listed (e.g. "2025-12-10T10:40:10.030Z").
  */
 export const PriceBox = ({ property }) => {
+  const [favourites, toggleFavourites] = useFavourites();
+
   const price = property.price;
   const priceLabel = new Intl.NumberFormat(navigator.language, {
     style: "currency",
@@ -57,6 +60,11 @@ export const PriceBox = ({ property }) => {
         {property.boundary && <Tag label={property.boundary} />}
         {dateLabel && <Tag label={dateLabel} />}
       </TagBox>
+
+      <button onClick={() => toggleFavourites(property.id)}>
+        {favourites.includes(property.id) ? "Remove from " : "Add to"}{" "}
+        Favourites
+      </button>
     </section>
   );
 };
