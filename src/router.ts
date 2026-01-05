@@ -7,6 +7,7 @@ export type Path =
   | `/`
   | `/bongus`
   | `/search`
+  | `/search/filter`
 
 export type Params = {
   

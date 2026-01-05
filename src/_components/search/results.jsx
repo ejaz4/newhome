@@ -1,19 +1,14 @@
-import { useEffect } from "react";
 import { usePropertySearch } from "../../libs/usePropertySearch";
 import { Result } from "./result";
 import styles from "./results.module.css";
 
-export const SearchResultsList = ({ query }) => {
-  const results = usePropertySearch(query);
-
-  useEffect(() => {
-    console.log(results);
-  }, [query]);
+export const SearchResultsList = (params) => {
+  const results = usePropertySearch(params);
 
   return (
     <ul className={styles.resultList}>
       {results.map((result, _) => (
-        <li>
+        <li key={_}>
           <Result
             street={result.location.street}
             id={result.id}

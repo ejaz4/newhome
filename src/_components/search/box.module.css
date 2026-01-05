@@ -10,11 +10,36 @@
     border: solid 1px var(--foreground-transparent);
 }
 
+.buttonStrip {
+    min-height: 100%;
+    padding: 0.5rem;
+    padding-inline-start: 0rem;
+    display: flex;
+    align-items: stretch;
+}
+
 .searchBox input {
     padding: 1rem;
     flex-grow: 1;
     font-size: 1rem;
     padding-inline-start: 0;
+    padding-inline-end: 0;
     outline: none;
     border: none;
+}
+
+.filter {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0rem 0.5rem;
+    /*margin-top: 0.5rem;*/
+    text-decoration: none;
+    color: var(--primary-colour);
+    align-items: center;
+    border-radius: 0.5rem;
+    justify-content: center;
+}
+
+.filter:hover {
+    background-color: var(--primary-colour-transparent);
 }

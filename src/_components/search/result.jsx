@@ -62,12 +62,11 @@ export const Result = ({
             .replaceAll("<br />", "\n")
             .slice(0, 300)
             .trim() + " "}
-          <a>
-            <RectangleEllipsisIcon
-              size={16}
-              style={{ verticalAlign: "middle" }}
-            />
-          </a>
+
+          <RectangleEllipsisIcon
+            size={16}
+            style={{ verticalAlign: "middle" }}
+          />
         </p>
       </div>
     </Link>

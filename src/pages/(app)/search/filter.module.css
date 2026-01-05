@@ -1,0 +1,45 @@
+.filterModal {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.filterModal form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.filterModal form section {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.filterModal form section > span {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.filterModal form section > * input {
+    width: 100%;
+}
+
+.filterModal form select,
+.filterModal form input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.75rem;
+    border: none;
+    background: var(--foreground-transparent);
+    /*outline: none;*/
+}
+
+@media only screen and (max-width: 1000px) {
+    .filterModal {
+        width: 100%;
+    }
+}
