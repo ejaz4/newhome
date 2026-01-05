@@ -5,10 +5,16 @@
     gap: 8px;
 }
 
-.gallery > * {
+.gallery img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.gallery > * {
+    width: 100%;
+    height: 100%;
+    /*object-fit: cover;*/
 }
 
 .gallery > *:nth-child(1) {

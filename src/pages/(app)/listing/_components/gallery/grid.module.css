@@ -1,0 +1,42 @@
+.modal {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-template-rows: repeat(5, 300px);*/
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+}
+
+.grid li,
+.grid li a {
+    aspect-ratio: 1.777777778;
+    width: 100%;
+    /*height: 100%;*/
+}
+
+.grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid {
+    margin: 0;
+    padding: 0;
+}
+
+.grid li {
+    list-style: none;
+}
+
+@media only screen and (max-width: 720px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

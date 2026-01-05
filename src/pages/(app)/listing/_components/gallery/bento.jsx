@@ -1,4 +1,7 @@
+import { Link } from "react-router";
 import styles from "./gallery.module.css";
+import { useParams } from "react-router";
+import { useLocation } from "react-router";
 
 /**
  *
@@ -6,10 +9,15 @@ import styles from "./gallery.module.css";
  * @returns
  */
 export const PhotoBento = ({ images }) => {
+  const params = useParams();
+  const location = useLocation();
+
   return (
     <section className={styles.gallery}>
-      {images.slice(0, 5).map((t) => (
-        <img src={t} />
+      {images.slice(0, 5).map((t, idx) => (
+        <Link to={`gallery`} state={{ background: location }}>
+          <img src={t} />
+        </Link>
       ))}
     </section>
   );

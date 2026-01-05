@@ -8,12 +8,16 @@ export type Path =
   | `/bongus`
   | `/favourites`
   | `/listing/*`
+  | `/listing/:id/gallery`
+  | `/listing/:id/gallery/:idx`
   | `/listing/:id/others`
   | `/search`
   | `/search/filter`
 
 export type Params = {
   '/listing/*': { '*': string }
+  '/listing/:id/gallery': { id: string }
+  '/listing/:id/gallery/:idx': { id: string; idx: string }
   '/listing/:id/others': { id: string }
 }
 
