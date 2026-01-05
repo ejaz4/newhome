@@ -13,6 +13,7 @@ export const usePropertySearch = ({
   tenure,
   town,
   bedrooms,
+  bedroomsMax,
   postcode,
 }) => {
   let results = useProperties();
@@ -104,6 +105,10 @@ export const usePropertySearch = ({
 
   if (bedrooms) {
     results = results.filter((e) => e.bedrooms.length > bedrooms);
+  }
+
+  if (bedroomsMax) {
+    results = results.filter((e) => e.bedrooms.length < bedroomsMax);
   }
 
   if (listedAfter) {

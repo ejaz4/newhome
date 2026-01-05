@@ -1,15 +1,20 @@
-export const Tag = ({ label }) => {
+import { Link } from "react-router";
+
+export const Tag = ({ label, to }) => {
   return (
-    <p
+    <Link
+      to={to}
       style={{
         textTransform: "uppercase",
         padding: "0.25rem",
         backgroundColor: "var(--foreground-transparent)",
         borderRadius: "0.25rem",
+        color: "inherit",
+        textDecoration: "none",
       }}
     >
       {label}
-    </p>
+    </Link>
   );
 };
 
